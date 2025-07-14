@@ -31,3 +31,4 @@
 /home/kritack/RandCS/server/obj/Debug/net8.0/server.pdb
 /home/kritack/RandCS/server/obj/Debug/net8.0/server.genruntimeconfig.cache
 /home/kritack/RandCS/server/obj/Debug/net8.0/ref/server.dll
+/home/kritack/RandCS/server/obj/Debug/net8.0/server.sourcelink.json
