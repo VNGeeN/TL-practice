@@ -6,7 +6,7 @@ public static class OrderProcessService
 
         bool isConfirmed = ConfirmationService.ConfirmOrder( data );
 
-        if (isConfirmed)
+        if ( isConfirmed )
         {
             OrderDeliveryService.SuccesfullOrder( data );
         }

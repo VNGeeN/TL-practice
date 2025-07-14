@@ -4,7 +4,7 @@ public static class RestartService
     {
         Console.WriteLine( "Хотите продолжить? (да/нет)" );
 
-        if (Console.ReadLine()?.Trim().Equals( "да", StringComparison.OrdinalIgnoreCase ) ?? false)
+        if ( Console.ReadLine()?.Trim().Equals( "да", StringComparison.OrdinalIgnoreCase ) ?? false )
         {
             OrderProcessService.StartOrderProcess();
         }

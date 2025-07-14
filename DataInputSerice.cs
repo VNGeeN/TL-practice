@@ -20,7 +20,7 @@ public static class DataInputSerice
     private static int GetValidInt( string message )
     {
         int result;
-        while (!int.TryParse( PromptUser( message ), out result ) || result <= 0)
+        while ( !int.TryParse( PromptUser( message ), out result ) || result <= 0 )
         {
             Console.WriteLine( "Некоректный ввод! Введите целое положительное число." );
         }

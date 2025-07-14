@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kritack/RandCS/MarketConsApp/MarketConsApp.csproj": {}
+    "/home/kritack/RandCS/MarketConsApp.csproj": {}
   },
   "projects": {
-    "/home/kritack/RandCS/MarketConsApp/MarketConsApp.csproj": {
+    "/home/kritack/RandCS/MarketConsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kritack/RandCS/MarketConsApp/MarketConsApp.csproj",
+        "projectUniqueName": "/home/kritack/RandCS/MarketConsApp.csproj",
         "projectName": "MarketConsApp",
-        "projectPath": "/home/kritack/RandCS/MarketConsApp/MarketConsApp.csproj",
+        "projectPath": "/home/kritack/RandCS/MarketConsApp.csproj",
         "packagesPath": "/home/kritack/.nuget/packages/",
-        "outputPath": "/home/kritack/RandCS/MarketConsApp/obj/",
+        "outputPath": "/home/kritack/RandCS/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kritack/.nuget/NuGet/NuGet.Config"
