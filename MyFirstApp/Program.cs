@@ -13,7 +13,7 @@ namespace Calculator
 
             string input = Console.ReadLine()?.Trim() ?? "";
 
-            if (string.IsNullOrEmpty( input ))
+            if ( string.IsNullOrEmpty( input ) )
             {
                 Console.WriteLine( "Пустой ввод" );
                 return;
@@ -25,17 +25,18 @@ namespace Calculator
                 double result = ExpressionProcessor.Process( tokens );
                 Console.WriteLine( $"Резудьтат: {result}" );
             }
-            catch (CalculationOverflowException ex)
+            catch ( CalculationOverflowException ex )
             {
                 Console.WriteLine( $"Ошибка переполнения: {ex.Message}" );
                 Console.WriteLine( $"Операция: {ex.Operation}" );
                 Console.WriteLine( $"Операнды: {ex.Operand1}, {ex.Operand2}" );
             }
-            catch (ArgumentException ex)
+            catch ( ArgumentException ex )
             {
                 Console.WriteLine( $"Ошибка вывода: {ex.Message}" );
             }
-            catch(Exception ex) {
+            catch ( Exception ex )
+            {
                 Console.WriteLine( $"Неизвестная ошибка: {ex.Message}" );
             }
         }

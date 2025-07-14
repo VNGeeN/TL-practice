@@ -14,38 +14,38 @@ namespace Calculator
 
         private static List<string> ProccesMulDiv( List<string> tokens )
         {
-            for (int i = 1; i < tokens.Count;)
+            for ( int i = 1; i < tokens.Count; )
             {
-                if (tokens[i] == "*" || tokens[i] == "/")
+                if ( tokens[ i ] == "*" || tokens[ i ] == "/" )
                 {
                     ValidateOperands( tokens, i );
 
-                    double left = ParseDouble( tokens[i - 1] );
-                    double right = ParseDouble( tokens[i + 1] );
+                    double left = ParseDouble( tokens[ i - 1 ] );
+                    double right = ParseDouble( tokens[ i + 1 ] );
 
                     double result;
 
                     try
                     {
-                        result = tokens[i] == "*"
+                        result = tokens[ i ] == "*"
                             ? SafeMath.Multiply( left, right )
                             : SafeMath.Divide( left, right );
                     }
-                    catch (CalculationOverflowException)
+                    catch ( CalculationOverflowException )
                     {
                         throw;
                     }
-                    catch (Exception ex) when (ex is DivideByZeroException)
+                    catch ( Exception ex ) when ( ex is DivideByZeroException )
                     {
                         throw;
                     }
 
-                    if (tokens[i] == "/" && right == 0)
+                    if ( tokens[ i ] == "/" && right == 0 )
                     {
                         throw new DivideByZeroException( "Деление на ноль" );
                     }
 
-                    tokens[i - 1] = result.ToString();
+                    tokens[ i - 1 ] = result.ToString();
                     tokens.RemoveRange( i, 2 );
                 }
                 else
@@ -58,27 +58,27 @@ namespace Calculator
 
         private static double ProccesAddSub( List<string> tokens )
         {
-            double result = ParseDouble( tokens[0] );
+            double result = ParseDouble( tokens[ 0 ] );
 
-            for (int i = 1; i < tokens.Count; i += 2)
+            for ( int i = 1; i < tokens.Count; i += 2 )
             {
-                if (i + 1 >= tokens.Count)
+                if ( i + 1 >= tokens.Count )
                 {
                     throw new ArgumentException( "Некоректное выражение" );
                 }
 
-                double num = ParseDouble( tokens[i + 1] );
+                double num = ParseDouble( tokens[ i + 1 ] );
 
                 try
                 {
-                    result = tokens[i] switch
+                    result = tokens[ i ] switch
                     {
                         "+" => SafeMath.Add( result, num ),
                         "-" => SafeMath.Subtract( result, num ),
-                        _ => throw new ArgumentException( $"Недопустимая операция: {tokens[i]}" )
+                        _ => throw new ArgumentException( $"Недопустимая операция: {tokens[ i ]}" )
                     };
                 }
-                catch (CalculationOverflowException)
+                catch ( CalculationOverflowException )
                 {
                     throw;
                 }
@@ -88,13 +88,13 @@ namespace Calculator
 
         private static void ValidateOperands( List<string> tokens, int index )
         {
-            if (index - 1 < 0 || index + 1 >= tokens.Count)
+            if ( index - 1 < 0 || index + 1 >= tokens.Count )
             {
                 throw new ArgumentException( "Некоректное выражение" );
             }
 
-            if (!TryParseDouble( tokens[index - 1], out _ ) ||
-                !TryParseDouble( tokens[index + 1], out _ ))
+            if ( !TryParseDouble( tokens[ index - 1 ], out _ ) ||
+                !TryParseDouble( tokens[ index + 1 ], out _ ) )
             {
                 throw new ArgumentException( "Операнды должны быть числами" );
             }
@@ -110,11 +110,11 @@ namespace Calculator
                     CultureInfo.InvariantCulture
                 );
             }
-            catch (FormatException)
+            catch ( FormatException )
             {
                 throw new ArgumentException( $"Некоректкный числовой формат: {str}" );
             }
-            catch (OverflowException)
+            catch ( OverflowException )
             {
                 throw new OverflowException( $"Число выходит за пределы диапазона: '{str}'" );
             }

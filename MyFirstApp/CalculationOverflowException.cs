@@ -11,7 +11,7 @@ namespace Calculator
             double op2,
             MathOperation operation,
             string message,
-            Exception innerException = null ) 
+            Exception innerException = null )
             : base( message, innerException )
         {
             Operand1 = op1;
