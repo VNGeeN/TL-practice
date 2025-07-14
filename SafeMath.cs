@@ -21,26 +21,26 @@ public static class SafeMath
         MathOperation operation,
         Func<double, double, double> opFunction )
     {
-        if (double.IsNaN( a ) || double.IsNaN( b ))
+        if ( double.IsNaN( a ) || double.IsNaN( b ) )
         {
             throw new ArgumentException( "Операнд не является числом (NaN)" );
         }
 
-        if (double.IsInfinity( a ) || double.IsInfinity( b ))
+        if ( double.IsInfinity( a ) || double.IsInfinity( b ) )
         {
             throw new ArgumentException( "Операнд является бесконечностью" );
         }
 
         try
         {
-            if (operation == MathOperation.Divide && b == 0)
+            if ( operation == MathOperation.Divide && b == 0 )
             {
                 throw new DivideByZeroException( "Деление на ноль" );
             }
 
-            if (operation == MathOperation.Multiply)
+            if ( operation == MathOperation.Multiply )
             {
-                if (Math.Abs( a ) > 1 && double.MaxValue / Math.Abs( a ) < Math.Abs( b ))
+                if ( Math.Abs( a ) > 1 && double.MaxValue / Math.Abs( a ) < Math.Abs( b ) )
                 {
                     throw new OverflowException( $"Переполнение: |{a}| * |{b}| > {double.MaxValue}" );
                 }
@@ -48,19 +48,19 @@ public static class SafeMath
 
             double result = opFunction( a, b );
 
-            if (double.IsInfinity( result ))
+            if ( double.IsInfinity( result ) )
             {
                 throw new OverflowException( "Результат операции выходит за пределы диапазона double" );
             }
 
-            if (result != 0 && Math.Abs( result ) < double.Epsilon)
+            if ( result != 0 && Math.Abs( result ) < double.Epsilon )
             {
                 throw new OverflowException( "Результат операции теряет значимость" );
             }
 
             return result;
         }
-        catch (OverflowException ex)
+        catch ( OverflowException ex )
         {
             throw new CalculationOverflowException(
                 a, b, operation,

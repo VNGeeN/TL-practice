@@ -1,0 +1,15 @@
+/home/kritack/RandCS/MyFirstApp/bin/Debug/net8.0/MyFirstApp
+/home/kritack/RandCS/MyFirstApp/bin/Debug/net8.0/MyFirstApp.deps.json
+/home/kritack/RandCS/MyFirstApp/bin/Debug/net8.0/MyFirstApp.runtimeconfig.json
+/home/kritack/RandCS/MyFirstApp/bin/Debug/net8.0/MyFirstApp.dll
+/home/kritack/RandCS/MyFirstApp/bin/Debug/net8.0/MyFirstApp.pdb
+/home/kritack/RandCS/MyFirstApp/obj/Debug/net8.0/MyFirstApp.GeneratedMSBuildEditorConfig.editorconfig
+/home/kritack/RandCS/MyFirstApp/obj/Debug/net8.0/MyFirstApp.AssemblyInfoInputs.cache
+/home/kritack/RandCS/MyFirstApp/obj/Debug/net8.0/MyFirstApp.AssemblyInfo.cs
+/home/kritack/RandCS/MyFirstApp/obj/Debug/net8.0/MyFirstApp.csproj.CoreCompileInputs.cache
+/home/kritack/RandCS/MyFirstApp/obj/Debug/net8.0/MyFirstApp.dll
+/home/kritack/RandCS/MyFirstApp/obj/Debug/net8.0/refint/MyFirstApp.dll
+/home/kritack/RandCS/MyFirstApp/obj/Debug/net8.0/MyFirstApp.pdb
+/home/kritack/RandCS/MyFirstApp/obj/Debug/net8.0/MyFirstApp.genruntimeconfig.cache
+/home/kritack/RandCS/MyFirstApp/obj/Debug/net8.0/ref/MyFirstApp.dll
+/home/kritack/RandCS/MyFirstApp/obj/Debug/net8.0/MyFirstApp.sourcelink.json
