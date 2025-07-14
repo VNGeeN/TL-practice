@@ -1,12 +1,21 @@
 public static class ConfirmationService
 {
-    public static bool ConfirmOrder( OrderData data )
+    public static NavigationOption ConfirmOrder( OrderData data )
     {
         string confirmMessage =
             $"Здравствуйте, {data.Name}, вы заказали {data.Count} {data.Product} " +
-            $"на адрес {data.Address}, всё верно ? (да/нет)";
-        Console.WriteLine( confirmMessage );
+            $"на адрес {data.Address}, всё верно ? ";
 
-        return Console.ReadLine()?.Trim().Equals( "да", StringComparison.OrdinalIgnoreCase ) ?? false;
+        return DataInputService.GetNavigationChoice
+            (
+                confirmMessage,
+                new Dictionary<NavigationOption, string>
+                {
+                    { NavigationOption.Confirm, "Да, всё верно" },
+                    { NavigationOption.Back, "Назад к редактированию" },
+                    { NavigationOption.Menu, "В главное меню" },
+                    { NavigationOption.Cancel, "Отменить заказ" }
+                }
+            );
     }
 }

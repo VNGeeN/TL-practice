@@ -1,6 +1,7 @@
-public record OrderData(
-    string Product,
-    int Count,
-    string Name,
-    string Address
-);
+public record OrderData
+{
+    public string Product { get; set; } = "";
+    public int Count { get; set; }
+    public string Name { get; set; } = "";
+    public string Address { get; set; } = "";
+}
