@@ -4,11 +4,11 @@ public static class OrderProcessService
     {
         OrderData data = DataInputSerice.CollectOrderData();
 
-        bool isConfirmed = ConfirmationService.ConfirmOrder(data);
+        bool isConfirmed = ConfirmationService.ConfirmOrder( data );
 
         if (isConfirmed)
         {
-            OrderDeliveryService.SuccesfullOrder(data);
+            OrderDeliveryService.SuccesfullOrder( data );
         }
         RestartService.HandleOrderRestart();
     }
