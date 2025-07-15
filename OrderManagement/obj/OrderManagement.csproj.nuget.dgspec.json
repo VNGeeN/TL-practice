@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kritack/RandCS/MarketConsApp/MarketConsApp.csproj": {}
+    "/home/kritack/RandCS/OrderManagement/OrderManagement.csproj": {}
   },
   "projects": {
-    "/home/kritack/RandCS/MarketConsApp/MarketConsApp.csproj": {
+    "/home/kritack/RandCS/OrderManagement/OrderManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kritack/RandCS/MarketConsApp/MarketConsApp.csproj",
-        "projectName": "MarketConsApp",
-        "projectPath": "/home/kritack/RandCS/MarketConsApp/MarketConsApp.csproj",
+        "projectUniqueName": "/home/kritack/RandCS/OrderManagement/OrderManagement.csproj",
+        "projectName": "OrderManagement",
+        "projectPath": "/home/kritack/RandCS/OrderManagement/OrderManagement.csproj",
         "packagesPath": "/home/kritack/.nuget/packages/",
-        "outputPath": "/home/kritack/RandCS/MarketConsApp/obj/",
+        "outputPath": "/home/kritack/RandCS/OrderManagement/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kritack/.nuget/NuGet/NuGet.Config"
